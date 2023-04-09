@@ -9,7 +9,7 @@
     <script src="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="assets/bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/aos/aos.css" />
-    <link rel='shortcut icon' type='image/x-icon' href='assets/images/favicon.ico' />
+    <link rel='shortcut icon' type='image/x-icon' href='assets/images/bcLogo3.ico' />
     <script src="assets/aos/aos.js"></script>
     <title>Brian's Website</title>
 </head>
@@ -57,8 +57,10 @@
     </nav>
     <a id="top"></a>
     <!-- First Container -->
-    <div class="container-fluid bg-2 text-center">
-        <h3 id="greetingText" class="margin" data-aos="zoom-in">Hello, I'm Brian. Web developer.</h3>
+    <!-- <div class="container-fluid bg-2 text-center"> -->
+    <div class="container-fluid bg-1 text-center">
+        <h3 id="greetingText" class="margin" data-aos="zoom-in">Hello, I'm <span id="nameColor">Brian.</span> Web
+            Developer.</h3>
         <h3 id="introPara">I'm an IT graduate from Singapore Polytechnic. I design and develop beautiful and simple web
             applications.</h3>
         <img id="dpImg" src="assets/images/introPic.png" class="margin" style="display:inline" alt="me" width="350"
@@ -584,8 +586,16 @@
         word-wrap: normal;
     }
 
+    #nameColor {
+        /* color: linear-gradient(to bottom right, #1abc9c, black); */
+        background: -webkit-linear-gradient(#0a473d, #6effe2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     .bg-1 {
-        background-color: #474e5d;
+        /* background-color: #474e5d; */
+        background-image: linear-gradient(to bottom right, #474e5d, black);
         color: #ffffff;
     }
 
