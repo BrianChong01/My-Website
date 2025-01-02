@@ -1,0 +1,614 @@
+/* Loading start */
+.loader-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #4e4e4e79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid #fff;
+  animation: loader 2s infinite ease;
+  z-index: 999;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  background-color: #fff;
+  animation: loader-inner 2s infinite ease-in;
+  z-index: 999;
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(180deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  75% {
+    transform: rotate(360deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/* Loading end */
+
+/* Fonts start */
+@font-face {
+  font-family: "Gothic";
+  src: url("assets/fonts/Gothic_A1/GothicA1-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Gothic Light";
+  src: url("assets/fonts/Gothic_A1/GothicA1-Light.ttf") format("truetype");
+}
+
+/* Fonts end */
+
+html {
+  font-family: "Gothic Light", Arial, Helvetica, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Nav bar start */
+#desktopNav,
+#menuToggle {
+  transition: top 0.5s;
+}
+
+#desktopNav {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensures it appears above other content */
+}
+
+#defaultNav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.defaultLink {
+  float: left;
+}
+
+.defaultLink a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.5vw 1.8vw;
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 300;
+  transition: 500ms;
+  letter-spacing: 0.3vw;
+}
+
+.defaultLink a:hover {
+  background-color: #111;
+  transition: 300ms;
+  text-decoration: none;
+  color: white;
+}
+
+#nameLink a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.4vw 1.8vw;
+  text-decoration: none;
+  font-size: 1.2vw;
+  font-weight: 500;
+  transition: 500ms;
+  letter-spacing: 0.1vw;
+}
+
+#nameLink a:hover {
+  text-decoration: none;
+  background-color: #333;
+}
+
+.active a,
+.active {
+  color: #1abc9c !important;
+  font-weight: 400;
+}
+
+/* Nav bar end */
+
+/* Content start */
+#greetingText {
+  font-size: 3.6vw;
+  font-weight: 700;
+  margin-bottom: 1.5vw;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.2rem;
+  letter-spacing: 0.05rem;
+}
+
+#introPara {
+  font-size: 1rem;
+  /* line-height: 1.2rem; */
+  font-weight: 400;
+  word-wrap: normal;
+  width: 40vw;
+  margin: 0 auto 3.5rem auto;
+}
+
+.contentPara {
+  font-size: 1.3rem;
+  width: 40vw;
+  margin: auto;
+  word-wrap: normal;
+}
+
+#nameColor {
+  /* color: linear-gradient(to bottom right, #1abc9c, black); */
+  background: -webkit-linear-gradient(#0a473d, #6effe2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-1 {
+  /* background-color: #474e5d; */
+  background-image: linear-gradient(to bottom right, #474e5d, black);
+  color: #ffffff;
+}
+
+.bg-2 {
+  background-color: #1abc9c;
+  color: #ffffff;
+}
+
+.bg-3 {
+  background-color: #2f2f2f;
+  color: #fff;
+}
+
+.container-fluid {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.margin {
+  margin-bottom: 4rem;
+  font-size: 3rem;
+}
+
+#dpImg {
+  width: 22vw;
+  height: 22vw;
+  display: block;
+  margin: 4vw auto 3vw auto;
+}
+
+.socialImg {
+  width: 18rem;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+
+.socialImg:hover {
+  transform: scale(1.3);
+}
+
+.cardCol {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+}
+
+.cardImage,
+.jwcardImage {
+  width: 25rem;
+  height: 15rem;
+  margin: auto;
+}
+
+.card-text {
+  margin-bottom: 2rem;
+  line-height: 1.6rem;
+}
+
+#ntuCard,
+#mlCard,
+#awsCard {
+  transition: 500ms !important;
+}
+
+#ntuCard:hover,
+#mlCard:hover,
+#awsCard:hover {
+  transition: 500ms !important;
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.linkBtn {
+  background-color: #1abc9c;
+  color: white;
+  transition: 300ms;
+  width: 8.2rem;
+}
+
+.linkBtn:hover {
+  background-color: #169e83;
+  color: white;
+  transition: 300ms;
+}
+
+.linkBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.linkBtn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.linkBtn:hover span {
+  padding-right: 25px;
+}
+
+.linkBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.certImage {
+  height: 13vw;
+}
+
+.middleCard {
+  width: 50%;
+  margin: 3rem auto 0 auto;
+}
+
+.centerCard {
+  margin: 3rem auto 0 auto;
+}
+
+.hobbyImages {
+  width: 18vw;
+  margin: 0 2vw 0 2vw;
+}
+
+#hobbiesCol {
+  padding-top: 3vw;
+  padding-bottom: 5vw;
+}
+
+#thirdSection {
+  padding-bottom: 2rem;
+}
+
+.responsive-google-slides {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 0.5rem;
+}
+
+.responsive-google-slides iframe {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#speechBubbleSection {
+  width: 100%;
+}
+
+#speechBubbleImg {
+  display: block;
+  margin: auto;
+  margin-bottom: 5vw;
+  text-align: center;
+  width: 50vw;
+}
+
+/* Content end */
+
+/* Scrollbar start */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1d1d1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Scrollbar end */
+
+/* Hamburger menu  start */
+/* Made by Erik Terwan 24th of November 2015 */
+#menuToggle {
+  display: block;
+  position: fixed;
+  top: 3rem;
+  left: 2.5rem;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #1abc9c;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #e7e7e7;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/* Transform all the slices of hamburger into a crossmark. */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 100vw;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+#menu li {
+  padding: 0.6rem 0;
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.3vw;
+}
+
+#mobileNameLink {
+  font-weight: 500 !important;
+  letter-spacing: 0.1vw !important;
+}
+
+#menuToggle input:checked ~ ul {
+  transform: none;
+}
+
+/* Hamburger menu end */
+
+/* Footer start */
+#footerText {
+  letter-spacing: 0.15rem;
+  margin-bottom: 0;
+}
+
+#footerBlock {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Footer end */
+
+@media only screen and (max-width: 600px) {
+  h3 {
+    font-size: 2rem;
+  }
+
+  #greetingText {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 3vw;
+  }
+
+  #introPara {
+    font-size: 1rem;
+    word-wrap: normal;
+    width: 70vw;
+    margin: auto;
+    padding: 0 0.5rem 0 0.5rem;
+    margin: 0 auto 2.4rem auto;
+  }
+
+  #dpImg {
+    height: 40vw;
+    width: 40vw;
+    margin: 6vw auto;
+  }
+
+  #footerText {
+    font-size: 0.8rem;
+  }
+
+  .container-fluid {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+  }
+
+  .margin {
+    margin-bottom: 3rem;
+  }
+
+  .cardImage {
+    width: 16rem;
+    height: auto;
+  }
+
+  .jwcardImage {
+    width: 16rem;
+    height: 8rem;
+  }
+
+  .certImage {
+    width: auto;
+    height: 6rem;
+  }
+
+  #ssImage {
+    margin-top: 4vw;
+    margin-bottom: 3vw;
+  }
+
+  .contentPara {
+    font-size: 1.1rem;
+    width: 60vw;
+    margin: auto;
+    word-wrap: normal;
+  }
+
+  .hobbyImages {
+    width: 22vw;
+    margin-bottom: 1vh;
+  }
+
+  #speechBubbleImg {
+    width: 80vw;
+    margin-bottom: 4rem;
+  }
+
+  .contactSection {
+    padding-bottom: 5rem;
+  }
+
+  .middleCard {
+    width: 100%;
+    margin: 1.5rem auto 1.5rem auto;
+  }
+
+  .linkBtn {
+    width: 8.5rem;
+  }
+}
