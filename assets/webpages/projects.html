@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../jquery-3.5.1.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="../bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="../aos/aos.css" />
+    <link rel="stylesheet" href="../../assets/index-css.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../images/bcLogo3.ico"
+    />
+    <script src="../aos/aos.js"></script>
+    <title>Brian's Website</title>
+  </head>
+
+  <body style="display: none">
+    <a id="top"></a>
+    <div class="loader-wrapper">
+      <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+    <nav id="desktopNav">
+      <ul id="defaultNav">
+        <li id="nameLink" class="defaultLink">
+          <a href="../../index.html">Brian Chong</a>
+        </li>
+        <li class="defaultLink activeTab">
+          <a href="#top">My Projects</a>
+        </li>
+        <li class="defaultLink">
+          <a href="../../index.html#certificates">Certificates</a>
+        </li>
+        <li class="defaultLink">
+          <a href="../../index.html#aboutMe">About Me</a>
+        </li>
+        <li class="defaultLink">
+          <a href="../../index.html#contactMe">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <nav id="mobileNav" style="display: none">
+      <div id="menuToggle">
+        <input type="checkbox" />
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+        <ul id="menu">
+          <a href="../../index.html">
+            <li>Home</li>
+          </a>
+          <a href="about.html">
+            <li class="activeTab">My Projects</li>
+          </a>
+          <a href="../../index.html#certificates">
+            <li>Certificates</li>
+          </a>
+          <a href="../../index.html#aboutMe">
+            <li>About Me</li>
+          </a>
+          <a href="../../index.html#contactMe">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="overflow: auto">
+      <div id="jwVidMobile" class="projectPics" style="display: none">
+        <video
+          id="jwOverviewVidMobile"
+          autoplay
+          muted
+          loop
+          src="../videos/jwCropped (2).mp4"
+        ></video>
+      </div>
+
+      <div id="jwContent" class="projectContent">
+        <h2>Jie Way Web Application</h2>
+        <p class="projectContentPara">
+          The goal of this project was to create a web application that would
+          allow potential clients to view a catalogue of products offered by the
+          company and provide product recommendations to suit their needs.
+        </p>
+
+        <p class="projectContentPara">
+          The web application was built using .Net MVC framework and was
+          meticulously designed in collaboration with a UI/UX designer.
+          Furthermore, the website was integrated with a MYSQL online database
+          for efficient storage of data, allowing for better scalability in the
+          future.
+        </p>
+
+        <p class="projectContentPara">
+          Working with different stakeholders in this project, I have gained
+          invaluable experience in teamwork and communication across
+          cross-functional teams.
+        </p>
+        <button
+          type="button"
+          id="jwLinkBtn"
+          class="btn linkBtn"
+          onclick="window.open(' https://jiewaywebsite.azurewebsites.net/','_blank')"
+        >
+          <span>View website</span>
+        </button>
+      </div>
+
+      <div id="jwVid" class="projectPics">
+        <video
+          id="jwOverviewVid"
+          autoplay
+          muted
+          loop
+          src="../videos/jwCropped (2).mp4"
+        ></video>
+      </div>
+
+      <div class="projectPics">
+        <video
+          id="ssOverviewVid"
+          autoplay
+          muted
+          loop
+          src="../videos/ssvid1v2.mp4"
+        ></video>
+      </div>
+
+      <div id="ssContent" class="projectContent">
+        <h2>ShareSpace prototype</h2>
+        <p class="projectContentPara">
+          This was the first real-world project outside of school that I've
+          done. Over a period of six months, I met up with the client and came
+          up with wireframes, together with a sitemap and prototype to address
+          his requirements.
+        </p>
+        <p class="projectContentPara">
+          The project aims to allow users to rent out their own spaces at home
+          or rent other users' spaces easily through a mobile application. In
+          addition, delivery services are also integrated into the application
+          for users to move their belongings with ease.
+        </p>
+        <p class="projectContentPara">
+          After working this project, I learnt to apply the design and user
+          interface skills I have acquired in school and understand how to
+          communicate my thoughts in a project more effectively.
+        </p>
+        <button
+          type="button"
+          id="ssLinkBtn"
+          class="btn linkBtn"
+          data-bs-toggle="modal"
+          data-bs-target="#ssModal"
+        >
+          <span>More info</span>
+        </button>
+      </div>
+
+      <div id="sdcVidMobile" class="projectPics" style="display: none">
+        <video
+          id="sdcOverviewVidMobile"
+          autoplay
+          muted
+          loop
+          src="../videos/sdcCropped.mp4"
+        ></video>
+      </div>
+
+      <div id="sdcContent" class="projectContent">
+        <h2>Sentosa Development Corporation Incentive Platform</h2>
+        <p class="projectContentPara">
+          This was my final-year project in Singapore Polytechnic which aimed to
+          develop an in-house incentive web portal for the staff of Sentosa
+          Development Corporation(SDC)  which satisfies their requirements.
+        </p>
+
+        <p class="projectContentPara">
+          The web application has multiple user roles, each with different
+          levels of authority. The admin user role can monitor and perform CRUD
+          operations on staff accounts while the remaining staff user accounts
+          can play games and issue compliments to one another.
+        </p>
+        <button
+          type="button"
+          id="sdcLinkBtn"
+          class="btn linkBtn"
+          data-bs-toggle="modal"
+          data-bs-target="#sdcModal"
+        >
+          <span>More info</span>
+        </button>
+      </div>
+
+      <div id="sdcVid" class="projectPics">
+        <video
+          id="sdcOverviewVid"
+          autoplay
+          muted
+          loop
+          src="../videos/sdcCropped.mp4"
+        ></video>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="ssModal"
+      tabindex="-1"
+      aria-labelledby="ssModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ssModalLabel">
+              ShareSpace Prototype Guide
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="responsive-google-slides">
+              <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vTU_DyV8WMF_ICqV-6CV6lomdeX3Ekd-at2b6jI4ptcxGzMXYyuJuA_nsMTUBZ7msdyC-Q3jNqMjLMt/embed?start=false&loop=false&delayms=3000"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="sdcModal"
+      tabindex="-1"
+      aria-labelledby="sdcModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="sdcModalLabel">SDC Project</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="responsive-google-slides">
+              <iframe
+                src="https://docs.google.com/presentation/d/e/2PACX-1vS05NXUu9wwFZRK-Gq8dvfa3TNIC34bB0eprHjzXAn9v5sL3Q9sAbW3r5p8Az4F4HmBTEgHSBZPulJ3/embed?start=false&loop=false&delayms=3000"
+                allowfullscreen="true"
+                mozallowfullscreen="true"
+                webkitallowfullscreen="true"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footerBlock" class="container-fluid bg-3 text-center">
+      <p id="footerText">Made by Brian Chong | 2023</p>
+    </footer>
+
+    <script>
+      $(document).ready(function () {
+        // Show body once everything is loaded
+        $("body").show();
+        $(".loader-wrapper").fadeOut("slow");
+        setTimeout(function () {
+          $(".loader-wrapper").fadeOut("slow");
+        }, 5000);
+
+        AOS.init({
+          duration: 1200,
+        });
+      });
+
+      // Media query
+      var deviceWidth = window.matchMedia("(max-width: 600px)");
+      if (deviceWidth.matches) {
+        $("#mobileNav").show();
+        $("#desktopNav").hide();
+        $("#sdcVidMobile").show();
+        $("#sdcVid").hide();
+        $("#jwVidMobile").show();
+        $("#jwVid").hide();
+      }
+    </script>
+  </body>
+
+  <style>
+    /* Content start */
+    h3 {
+      font-weight: 400;
+      font-size: 2.2rem;
+      letter-spacing: 0.05rem;
+    }
+
+    .activeTab a,
+    .activeTab {
+      color: #1abc9c !important;
+      font-weight: 400;
+    }
+
+    #ssOverviewVid {
+      width: 18vw;
+    }
+
+    #sdcOverviewVid,
+    #jwOverviewVid {
+      width: 45vw;
+    }
+
+    .projectContentPara {
+      font-size: 1rem;
+      margin: auto;
+      word-wrap: normal;
+      margin-bottom: 1vw;
+      line-height: 1.8rem;
+    }
+
+    #jwLinkBtn {
+      width: 9.5rem;
+    }
+
+    .linkBtn {
+      color: white;
+      transition: 300ms;
+      width: 8.4rem;
+      margin-top: 1vw;
+      border: 1px solid #1abc9c;
+    }
+
+    .linkBtn:hover {
+      background-color: #169e83;
+      color: white;
+      transition: 300ms;
+    }
+
+    .linkBtn span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+
+    .linkBtn span:after {
+      content: "\00bb";
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+
+    .linkBtn:hover span {
+      padding-right: 25px;
+    }
+
+    .linkBtn:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+
+    .projectPics {
+      float: left;
+      width: 40%;
+      text-align: center;
+      padding: 2.5vw 0 2.5vw 0;
+    }
+
+    .projectContent {
+      float: left;
+      width: 60%;
+      padding: 8vw 10vw 5vw 0;
+    }
+
+    #sdcVid,
+    #jwVid {
+      float: left;
+      width: 60%;
+      text-align: center;
+      padding: 5.5vw 2.5vw 15vw 0;
+    }
+
+    #sdcContent,
+    #jwContent {
+      clear: both;
+      float: left;
+      width: 40%;
+      padding: 6vw 0 5vw 5vw;
+    }
+
+    .projectContent h2 {
+      color: #1abc9c;
+      margin-bottom: 1vw;
+    }
+
+    .responsive-google-slides {
+      position: relative;
+      padding-bottom: 56.25%;
+      /* 16:9 Ratio */
+      height: 0;
+      overflow: hidden;
+      margin: 0.5rem;
+    }
+
+    .responsive-google-slides iframe {
+      border: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    .bg-3 {
+      background-color: #2f2f2f;
+      color: #fff;
+    }
+
+    /* Content end */
+
+    @media only screen and (max-width: 600px) {
+      .projectPics,
+      .projectContent {
+        width: 100%;
+      }
+
+      #ssOverviewVid {
+        margin-top: 20vw;
+        width: 35vw;
+      }
+
+      #ssContent {
+        padding: 12vw;
+      }
+
+      #sdcOverviewVidMobile {
+        width: 100%;
+        padding: 6vw 12vw 6vw 12vw;
+        clear: both;
+      }
+
+      #jwOverviewVidMobile {
+        width: 100%;
+        padding: 6vw 12vw 6vw 12vw;
+        margin-top: 6rem;
+        clear: both;
+      }
+
+      #sdcContent,
+      #jwContent {
+        width: 100%;
+        padding: 2vw 12vw 20vw 12vw;
+      }
+
+      .linkBtn {
+        margin-top: 4vw;
+      }
+
+      .projectContent h2 {
+        margin-bottom: 4vw;
+      }
+
+      .projectprojectContentPara {
+        margin-bottom: 3vw;
+      }
+    }
+  </style>
+</html>
